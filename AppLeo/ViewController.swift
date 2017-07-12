@@ -9,17 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textTF: UITextView!
+    @IBOutlet weak var mirrorLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func translate(_ sender: UIButton) {
+        mirrorLabel.text = textTF.text
+        mirrorLabel.transform = CGAffineTransform(scaleX: -1, y: 1)
     }
-
+    
 
 }
 
