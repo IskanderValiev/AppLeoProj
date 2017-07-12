@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var textTV: UITextView!
-    @IBOutlet weak var mirrorLabel: UILabel!
 
     @IBOutlet weak var mirrorLabelText: UILabel!
     
@@ -39,12 +38,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func translate(_ sender: UIButton) {
-        mirrorLabel.text = textTV.text
+        mirrorLabelText.text = textTV.text
         
         UIView.animate(withDuration: 1.0) { 
-          self.mirrorLabel.transform = CGAffineTransform(scaleX: -1, y: 1)
+          self.mirrorLabelText.transform = CGAffineTransform(scaleX: -1, y: 1)
         }
-        mirrorLabel.sizeToFit()
+        mirrorLabelText.sizeToFit()
         
     }
     
