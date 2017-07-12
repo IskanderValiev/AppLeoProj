@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var textTF: UITextView!
+    @IBOutlet weak var textTV: UITextView!
     @IBOutlet weak var mirrorLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        textTV.layer.borderWidth = 1.0
+        textTV.layer.borderColor = UIColor.black.cgColor
     }
 
     @IBAction func translate(_ sender: UIButton) {
-        mirrorLabel.text = textTF.text
-        mirrorLabel.transform = CGAffineTransform(scaleX: -1, y: 1)
+        mirrorLabel.text = textTV.text
+        
+        UIView.animate(withDuration: 1.0) { 
+          self.mirrorLabel.transform = CGAffineTransform(scaleX: -1, y: 1)
+        }
+        mirrorLabel.sizeToFit()
+        
     }
     
 
