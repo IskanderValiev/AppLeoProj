@@ -86,7 +86,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-pC-7Gn">
                                 <rect key="frame" x="160" y="272" width="54" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mirrorIcon"/>
                                 <connections>
                                     <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Suh-zA-knn"/>
@@ -106,7 +106,7 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-dz-EIM">
                                 <rect key="frame" x="164" y="560" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
                                     <action selector="myShareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjh-C5-kUm"/>
@@ -125,6 +125,7 @@
                     <tabBarItem key="tabBarItem" title="Mirror" image="translateIcon" id="KW0-uZ-G8f"/>
                     <connections>
                         <outlet property="mirrorLabelText" destination="9qH-mV-4iw" id="b1w-a3-HSU"/>
+                        <outlet property="myShareButtonProperty" destination="v3J-dz-EIM" id="BQA-d7-niS"/>
                         <outlet property="textTV" destination="XEh-qc-w2V" id="sze-5V-Hag"/>
                     </connections>
                 </viewController>
