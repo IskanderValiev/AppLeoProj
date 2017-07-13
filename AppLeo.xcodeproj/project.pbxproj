@@ -14,6 +14,7 @@
 		6514E5021F16099B00FE287F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6514E5001F16099B00FE287F /* LaunchScreen.storyboard */; };
 		6514E50D1F16099C00FE287F /* AppLeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514E50C1F16099C00FE287F /* AppLeoTests.swift */; };
 		6514E5181F16099C00FE287F /* AppLeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514E5171F16099C00FE287F /* AppLeoUITests.swift */; };
+		6514E52C1F17A27D00FE287F /* FoodFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514E52B1F17A27D00FE287F /* FoodFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6514E5131F16099C00FE287F /* AppLeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6514E5171F16099C00FE287F /* AppLeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLeoUITests.swift; sourceTree = "<group>"; };
 		6514E5191F16099C00FE287F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6514E52B1F17A27D00FE287F /* FoodFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				6514E4F71F16099B00FE287F /* AppDelegate.swift */,
 				6514E4F91F16099B00FE287F /* ViewController.swift */,
 				6514E4FB1F16099B00FE287F /* Main.storyboard */,
+				6514E52B1F17A27D00FE287F /* FoodFeature.swift */,
 				6514E4FE1F16099B00FE287F /* Assets.xcassets */,
 				6514E5001F16099B00FE287F /* LaunchScreen.storyboard */,
 				6514E5031F16099C00FE287F /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6514E4FA1F16099B00FE287F /* ViewController.swift in Sources */,
+				6514E52C1F17A27D00FE287F /* FoodFeature.swift in Sources */,
 				6514E4F81F16099B00FE287F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				6514E51E1F16099C00FE287F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6514E51F1F16099C00FE287F /* Build configuration list for PBXNativeTarget "AppLeoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				6514E5211F16099C00FE287F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6514E5221F16099C00FE287F /* Build configuration list for PBXNativeTarget "AppLeoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				6514E5241F16099C00FE287F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
