@@ -30,6 +30,11 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
         foodNames.append("Ratatui")
         foodImagesName.append("ratatui1")
         
+        foodNames.append("Nut")
+        foodImagesName.append("nut")
+        
+        
+        
         
     }
     
