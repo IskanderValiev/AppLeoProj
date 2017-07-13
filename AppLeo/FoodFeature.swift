@@ -33,8 +33,14 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
         foodNames.append("Nut")
         foodImagesName.append("nut")
         
+        foodNames.append("Guacamole");
+        foodImagesName.append("guacamole")
         
+        foodNames.append("Babaganush")
+        foodImagesName.append("babaganush")
         
+        foodNames.append("Falafel")
+        foodImagesName.append("falafel")
         
     }
     

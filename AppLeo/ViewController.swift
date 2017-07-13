@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     @IBAction func translate(_ sender: UIButton) {
         mirrorLabelText.text = textTV.text
+        textTV.resignFirstResponder()
         
         UIView.animate(withDuration: 1.0) { 
           self.mirrorLabelText.transform = CGAffineTransform(scaleX: -1, y: 1)
