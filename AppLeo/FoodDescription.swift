@@ -32,7 +32,7 @@ class FoodDescription: UIViewController {
         descriptionView.isEditable = false
         
         foodView.image = UIImage(named: foodImageName)
-        
+
         
         foodNameLabel.text = foodName
         foodNameLabel.sizeToFit()
@@ -45,7 +45,7 @@ class FoodDescription: UIViewController {
         
         let height = foodView.frame.size.height + foodNameLabel.frame.size.height + descriptionView.frame.size.height + reciepView.frame.size.height
         
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: height + 200)
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: height + 100)
         
     }
 
