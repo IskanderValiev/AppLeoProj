@@ -36,6 +36,7 @@ class FoodDescription: UIViewController {
         
         foodNameLabel.text = foodName
         foodNameLabel.sizeToFit()
+        foodNameLabel.frame.origin.x = view.center.x - foodNameLabel.frame.width / 2
         
         descriptionView.text = foodDescription
         descriptionView.sizeToFit()
@@ -49,7 +50,7 @@ class FoodDescription: UIViewController {
         
        var yCoordinate = foodView.frame.size.height
         
-        foodNameLabel.frame.origin.y = yCoordinate + 10
+        foodNameLabel.frame.origin.y = yCoordinate + 2
         
         yCoordinate = foodNameLabel.frame.origin.y + foodNameLabel.frame.size.height
         
@@ -59,7 +60,6 @@ class FoodDescription: UIViewController {
         
         reciepView.frame.origin.y = yCoordinate + 25
 
-        
     }
 
     override func didReceiveMemoryWarning() {
