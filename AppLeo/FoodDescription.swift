@@ -45,7 +45,20 @@ class FoodDescription: UIViewController {
         
         let height = foodView.frame.size.height + foodNameLabel.frame.size.height + descriptionView.frame.size.height + reciepView.frame.size.height
         
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: height + 100)
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: height + 60)
+        
+       var yCoordinate = foodView.frame.size.height
+        
+        foodNameLabel.frame.origin.y = yCoordinate + 10
+        
+        yCoordinate = foodNameLabel.frame.origin.y + foodNameLabel.frame.size.height
+        
+        descriptionView.frame.origin.y = yCoordinate + 10
+        
+        yCoordinate = descriptionView.frame.size.height + descriptionView.frame.origin.y
+        
+        reciepView.frame.origin.y = yCoordinate + 25
+
         
     }
 
