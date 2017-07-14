@@ -18,6 +18,8 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     var foodNames: [String] = []
     var foodImagesName: [String] = []
+    var foodRecipes: [String] = []
+    var foodDescription: [String] = []
     
     
     
@@ -26,6 +28,8 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         foodNames.append("Aidaho Potato")
         foodImagesName.append("aidahoPotato")
+        foodDescription.append("Картофель «Айдахо» — один из самых часто приготовляемых картофельных гарниров в мире. Несмотря на свое американское происхождение и оригинальное название (просто картофель там основная сельскохозяйственная культура), в России его больше знают как картофель по-деревенски. Чаще всего он подается к жареному мясу. Мясо может быть в любой форме: стейк, бургер, тонкая соломка. Впрочем, «Айдахо» вполне убедителен и без протеиновых скреп. Сам по себе. Как свой собственный штат Айдахо.")
+        foodRecipes.append(" 1. Картофель хорошо промыть (очищать не надо), нарезать вдоль на восемь долек, положить в кастрюлю с холодной подсоленной водой.\n 2. Довести до кипения и варить 2–3 минуты. Слить воду и поставить картофель остывать.\n 3. Смешать оливковое масло с мелко порезанной зеленью, соусом и продавленным через чеснокодавилку чесноком. Выложить картофель на противень в один слой, предварительно обмакнув дольки в получившуюся смесь.\n 4. Запекать в духовке 15–20 минут при температуре 200 градусов.")
         
         foodNames.append("Ratatui")
         foodImagesName.append("ratatui1")
@@ -41,6 +45,8 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         foodNames.append("Falafel")
         foodImagesName.append("falafel")
+        
+        navigationItem.title = "Food catalog"
         
     }
     
@@ -62,6 +68,27 @@ class FoodFeature: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "description", sender: indexPath.row)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "description" && sender != nil {
+            
+            let index = sender as! Int
+            let destinationVC = segue.destination as! FoodDescription
+            
+            destinationVC.foodImageName = foodImagesName[index]
+            destinationVC.foodName = foodNames[index]
+            destinationVC.foodDescription = foodDescription[index]
+            destinationVC.foodRecipe = foodRecipes[index]
+            
+        }
+    }
+    
     
     
     

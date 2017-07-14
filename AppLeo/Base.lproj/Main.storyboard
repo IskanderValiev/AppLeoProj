@@ -28,6 +28,23 @@
             </objects>
             <point key="canvasLocation" x="-858" y="1433"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="6Ri-NN-INc">
+            <objects>
+                <navigationController id="Q4p-g2-d2w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZX0-Qc-x8K"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0uZ-bm-wca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VAG-SQ-N6z" kind="relationship" relationship="rootViewController" id="CWS-so-Q7a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac8-uZ-5wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="-1254"/>
+        </scene>
         <!--Food-->
         <scene sceneID="jfk-Wi-HbQ">
             <objects>
@@ -57,11 +74,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abU-5w-y3k" id="6kI-Yt-Y8M">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4cb-dl-rtB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="93.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="93"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -81,32 +98,75 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food" image="veganIcon" id="BgZ-Mq-OBu"/>
+                    <navigationItem key="navigationItem" id="e3T-re-AU5"/>
                     <connections>
                         <outlet property="foodTV" destination="y9J-4L-NPQ" id="Stk-rW-kif"/>
-                        <segue destination="lap-9E-qYF" kind="show" id="EcQ-G1-1jL"/>
+                        <segue destination="lap-9E-qYF" kind="show" identifier="description" id="EcQ-G1-1jL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bn4-Ob-4Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="-1252"/>
+            <point key="canvasLocation" x="255" y="-1254"/>
         </scene>
-        <!--View Controller-->
+        <!--Food Description-->
         <scene sceneID="klz-jK-4yh">
             <objects>
-                <viewController id="lap-9E-qYF" sceneMemberID="viewController">
+                <viewController id="lap-9E-qYF" customClass="FoodDescription" customModule="AppLeo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u3e-bm-99g"/>
                         <viewControllerLayoutGuide type="bottom" id="XVr-po-UpW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S57-tf-oEo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IrK-F3-U4X">
+                                <rect key="frame" x="0.0" y="64" width="375" height="887"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-kx-ci9">
+                                        <rect key="frame" x="20" y="-44" width="335" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgO-W1-Xij">
+                                        <rect key="frame" x="132" y="154" width="110" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Blk-7M-GRN">
+                                        <rect key="frame" x="20" y="205" width="335" height="269"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6m5-gt-ukk">
+                                        <rect key="frame" x="20" y="482" width="335" height="341"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="descriptionView" destination="Blk-7M-GRN" id="Pac-Lk-7rJ"/>
+                        <outlet property="foodNameLabel" destination="GgO-W1-Xij" id="0Ge-CW-STV"/>
+                        <outlet property="foodView" destination="WC5-kx-ci9" id="eHb-FK-rGl"/>
+                        <outlet property="reciepView" destination="6m5-gt-ukk" id="pBS-JD-Ngd"/>
+                        <outlet property="scrollView" destination="IrK-F3-U4X" id="ofK-7O-cmA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuG-Ne-89n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="-1251"/>
+            <point key="canvasLocation" x="1461.5999999999999" y="-1254.872563718141"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XBn-iV-rp8">
@@ -120,7 +180,7 @@
                     <connections>
                         <segue destination="q83-j7-8WD" kind="relationship" relationship="viewControllers" id="yII-5w-NsH"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MMQ-jK-5x5"/>
-                        <segue destination="VAG-SQ-N6z" kind="relationship" relationship="viewControllers" id="q1p-8C-U7z"/>
+                        <segue destination="Q4p-g2-d2w" kind="relationship" relationship="viewControllers" id="Wf8-WT-LQ0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3Z-2h-be7" userLabel="First Responder" sceneMemberID="firstResponder"/>
