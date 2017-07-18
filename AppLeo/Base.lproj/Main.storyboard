@@ -12,7 +12,7 @@
         <!--Alarm-->
         <scene sceneID="kfd-eC-vPI">
             <objects>
-                <viewController id="q83-j7-8WD" sceneMemberID="viewController">
+                <viewController id="q83-j7-8WD" customClass="AlarmViewController" customModule="AppLeo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hlp-ad-pxK"/>
                         <viewControllerLayoutGuide type="bottom" id="L3D-uC-pep"/>
@@ -20,13 +20,41 @@
                     <view key="view" contentMode="scaleToFill" id="Wq4-Gq-Dj5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHF-CM-Wmz">
+                                <rect key="frame" x="155" y="277" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="press me"/>
+                                <connections>
+                                    <action selector="pressed:" destination="q83-j7-8WD" eventType="touchUpInside" id="ta1-t8-eD0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr2-j3-8CU">
+                                <rect key="frame" x="164" y="365" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="q83-j7-8WD" eventType="touchUpInside" id="Dk2-du-aNR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-g8-Z4p">
+                                <rect key="frame" x="166" y="85" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alarm" image="alarmIcon" id="cFR-YC-DJx"/>
+                    <connections>
+                        <outlet property="currentTime" destination="kwi-g8-Z4p" id="dPV-MO-Jcq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtR-8T-oKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="1433"/>
+            <point key="canvasLocation" x="-858.39999999999998" y="1432.5337331334333"/>
         </scene>
         <!--Item-->
         <scene sceneID="6Ri-NN-INc">
